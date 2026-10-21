@@ -39,8 +39,8 @@ const portfolio = {
 
   cv: {
     // Replace the file in /public/cv and update this path if the name changes.
-    file: '/cv/Rasheed_Ayomide_CV.pdf',
-    downloadName: 'Rasheed_Ayomide_CV.pdf',
+    file: '/cv/Abdulwaheed_Rasheed_Ayomide_MERN_CV.pdf',
+    downloadName: 'Abdulwaheed_Rasheed_Ayomide_MERN_CV.pdf',
     lastUpdated: null, // e.g. 'September 2026'
   },
 
