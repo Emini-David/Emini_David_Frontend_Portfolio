@@ -30,7 +30,7 @@ const portfolio = {
 
   socialLinks: {
     github: 'https://github.com/abdulrasheed-ayomide',
-    linkedin: 'https://www.linkedin.com/in/rasheed-ayomide-3a8453395',
+    linkedin: 'https://www.linkedin.com/in/rasheed-abdulwaheed-3a8453395',
     x: null, // add your X profile URL here to show the icon
   },
 
@@ -78,7 +78,7 @@ const portfolio = {
       {
         school: 'SQI College of ICT',
         qualification: 'Professional Diploma in Software Engineering',
-        period: 'Graduated August 2025',
+        period: 'Expected Graduation: December 2026',
       },
     ],
   },

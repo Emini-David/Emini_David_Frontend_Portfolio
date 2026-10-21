@@ -40,9 +40,9 @@ const projects = [
   {
     id: 'saki-stars-fc',
     name: 'Saki Stars FC',
-    category: 'Football Club Management Platform',
+    category: 'Full-Stack Football Club Management Platform',
     description:
-      'A full-stack football club management platform designed to bring public club content, player management, staff operations, football competitions and administrative workflows into one system.',
+      'A full-stack football club management platform designed to bring club content, player management, staff operations, football competitions, scouting, and administrative workflows into one system.',
     overview:
       'One repository holds the public club website, a Player Portal for approved players and a Staff Dashboard for club operations. Everything shown on the website comes from the database.',
     highlights: [
@@ -65,10 +65,10 @@ const projects = [
       'Cloudinary',
       'Resend',
     ],
-    liveUrl: null,
+    liveUrl: 'https://sakistars.com',
     githubUrl: 'https://github.com/abdulrasheed-ayomide/saki-stars-fc',
     featured: true,
-    status: 'source',
+    status: 'live',
     // Please confirm or adjust this wording so it describes your role accurately.
     role: 'Full-stack build, developed with AI-assisted tooling.',
     technicalDecisions: [
