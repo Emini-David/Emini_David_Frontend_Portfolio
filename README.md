@@ -1,4 +1,4 @@
-# Rasheed Ayomide — Portfolio
+# Ogunfadewo David Ayodele — Portfolio
 
 My personal portfolio website as a Full Stack MERN Developer.
 
