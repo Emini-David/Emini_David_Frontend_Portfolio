@@ -89,7 +89,7 @@ export default function Portfolio() {
   usePageMeta({
     title: 'Portfolio',
     description:
-      'Featured and selected projects by Rasheed Ayomide: full-stack platforms, a banking application and e-commerce storefronts.',
+      'Featured and selected projects by David Ayodele: full-stack platforms, a banking application and e-commerce storefronts.',
   })
 
   return (

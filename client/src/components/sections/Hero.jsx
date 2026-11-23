@@ -33,7 +33,7 @@ export default function Hero() {
 
         <div className="hero-visual">
           <div className={`hero-photo ${profileImageCutout ? 'hero-photo--cutout' : ''}`}>
-            <img src={profileImage} alt={profileImageAlt} width="640" height="800" fetchPriority="high" decoding="async" />
+            <img src={profileImage} alt={profileImageAlt} width="700" height="900" fetchPriority="high" decoding="async" />
           </div>
         </div>
       </div>

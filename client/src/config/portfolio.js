@@ -9,38 +9,37 @@
  */
 // Profile photo (square crop of the original portrait).
 // For a transparent-background cut-out instead, import that file and set profileImageCutout to true.
-import profileImage from '../assets/image.png'
+import profileImage from '../assets/david-ayodele-passport.jpg'
 
 const portfolio = {
-  name: 'Rasheed Ayomide',
-  firstName: 'Rasheed',
-  lastName: 'Ayomide',
-  initials: 'RA',
+  name: 'David Ayodele',
+  firstName: 'David',
+  lastName: 'Ayodele',
+  initials: 'DA',
   title: 'Full Stack MERN Developer',
   description:
     'I build modern web applications, APIs and digital solutions with React, Node.js, Express and MongoDB, with a focus on clean code, performance and real user impact.',
 
   profileImage,
   profileImageCutout: false,
-  profileImageAlt: 'Portrait of Rasheed Ayomide in a dark suit',
+  profileImageAlt: 'Portrait of David Ayodele',
 
-  email: 'ayomiderasheed226@gmail.com',
+  email: 'davidayodele377@gmail.com',
   // International format without "+" or spaces, used for the WhatsApp link. Set to null to hide.
-  whatsapp: '2348088368437',
+  whatsapp: '2348153709083',
 
   socialLinks: {
-    github: 'https://github.com/abdulrasheed-ayomide',
-    linkedin: 'https://www.linkedin.com/in/rasheed-abdulwaheed-3a8453395',
-    x: null, // add your X profile URL here to show the icon
+    github: 'https://github.com/Emini-David',
+    linkedin: 'https://www.linkedin.com/in/david-ayodele-ogunfadewo-94b209375/',
+    x: 'https://x.com/ayodele_da93794',
   },
 
   // "View More Projects" button destination
-  moreProjectsUrl: 'https://github.com/abdulrasheed-ayomide?tab=repositories',
+  moreProjectsUrl: 'https://github.com/Emini-David?tab=repositories',
 
   cv: {
-    // Replace the file in /public/cv and update this path if the name changes.
-    file: '/cv/Abdulwaheed_Rasheed_Ayomide_MERN_CV.pdf',
-    downloadName: 'Abdulwaheed_Rasheed_Ayomide_MERN_CV.pdf',
+    file: '/cv/David_Ayodele_CV.pdf',
+    downloadName: 'David_Ayodele_CV.pdf',
     lastUpdated: null, // e.g. 'September 2026'
   },
 
@@ -90,10 +89,10 @@ const portfolio = {
   },
 
   seo: {
-    siteName: 'Rasheed Ayomide',
-    defaultTitle: 'Rasheed Ayomide | Full Stack MERN Developer',
+    siteName: 'David Ayodele',
+    defaultTitle: 'David Ayodele | Full Stack MERN Developer',
     defaultDescription:
-      'Rasheed Ayomide is a Full Stack MERN Developer building web applications, APIs and digital solutions with React, Node.js, Express and MongoDB.',
+      'David Ayodele is a Full Stack MERN Developer building web applications, APIs and digital solutions with React, Node.js, Express and MongoDB.',
   },
 }
 

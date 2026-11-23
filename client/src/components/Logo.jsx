@@ -5,7 +5,7 @@ export default function Logo({ onClick }) {
   return (
     <Link to="/" className="logo" onClick={onClick} aria-label={`${portfolio.name}, home`}>
       <span className="logo-mark" aria-hidden="true">
-        {portfolio.initials}
+        <img src="/brand-mark.png" alt="" />
       </span>
       <span className="logo-name">{portfolio.name}</span>
     </Link>
