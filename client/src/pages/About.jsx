@@ -15,7 +15,7 @@ export default function About() {
       <section className="page-hero" aria-labelledby="about-page-title">
         <div className="container page-hero__grid">
           <SectionHeader as="h1" id="about-page-title" label="About Me" title={about.statement} />
-          <Reveal className="about-body">
+          <Reveal direction="right" className="about-body">
             <p className="lead">
               I&rsquo;m {name}, a {title}.
             </p>
@@ -28,10 +28,10 @@ export default function About() {
 
       <section className="section section--tight" aria-labelledby="approach-title">
         <div className="container">
-          <SectionHeader id="approach-title" label="How I work" title="Development approach" />
+          <SectionHeader id="approach-title" label="My process" title="How I approach projects" />
           <ol className="approach-grid">
             {about.approach.map((a, i) => (
-              <Reveal as="li" key={a.title} className="approach-card" delay={i * 80}>
+              <Reveal as="li" direction={i % 2 ? 'right' : 'left'} key={a.title} className="approach-card" delay={i * 80}>
                 <span className="approach-num" aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -46,7 +46,7 @@ export default function About() {
       <section className="section section--tight" aria-labelledby="focus-title">
         <div className="container about-grid">
           <SectionHeader id="focus-title" label="Professional focus" title="What I concentrate on" />
-          <Reveal>
+          <Reveal direction="right">
             <ul className="focus-list">
               {about.focus.map((f) => (
                 <li key={f}>
@@ -65,14 +65,15 @@ export default function About() {
           <div className="container">
             <SectionHeader id="education-title" label="Education" title="Education" />
             <div className="education-list">
-              {about.education.map((e) => (
-                <Reveal as="article" key={e.school + e.qualification} className="education-card">
+            {about.education.map((e, i) => (
+                <Reveal as="article" direction={i % 2 ? 'right' : 'left'} key={e.school + e.qualification} className="education-card">
                   <span className="education-icon" aria-hidden="true">
                     <FiBookOpen />
                   </span>
                   <div>
                     <h3>{e.qualification}</h3>
                     <p className="education-school">{e.school}</p>
+                    {e.location && <p className="education-location">{e.location}</p>}
                     {e.period && <p className="education-period">{e.period}</p>}
                   </div>
                 </Reveal>

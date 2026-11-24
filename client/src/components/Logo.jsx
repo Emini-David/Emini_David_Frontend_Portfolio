@@ -3,11 +3,11 @@ import portfolio from '../config/portfolio'
 
 export default function Logo({ onClick }) {
   return (
-    <Link to="/" className="logo" onClick={onClick} aria-label={`${portfolio.name}, home`}>
+    <Link to="/" className="logo" onClick={onClick} aria-label={`${portfolio.brandName}, home`}>
       <span className="logo-mark" aria-hidden="true">
         <img src="/brand-mark.png" alt="" />
       </span>
-      <span className="logo-name">{portfolio.name}</span>
+      <span className="logo-name">{portfolio.brandName}</span>
     </Link>
   )
 }

@@ -4,14 +4,18 @@ import SocialLinks from '../SocialLinks'
 import portfolio from '../../config/portfolio'
 
 export default function Hero() {
-  const { firstName, lastName, title, description, profileImage, profileImageCutout, profileImageAlt } = portfolio
+  const { firstName, middleName, lastName, title, description, profileImage, profileImageCutout, profileImageAlt } = portfolio
   return (
     <section className="hero" aria-labelledby="hero-title">
       <div className="container hero-grid">
-        <div className="hero-copy">
+        <div className="hero-copy hero-copy--enter">
           <p className="hero-greeting">Hi, I&rsquo;m</p>
           <h1 id="hero-title" className="hero-name">
-            <span>{firstName}</span> <span className="text-accent">{lastName}</span>
+            <span className="hero-name-typing hero-name-first" aria-hidden="true">{firstName}</span>
+            <span className="hero-name-typing hero-name-lastline" aria-hidden="true">
+              {middleName} <span className="text-accent">{lastName}</span>
+            </span>
+            <span className="sr-only">{firstName} {middleName} {lastName}</span>
           </h1>
           <p className="hero-role">
             <span className="hero-role-line" aria-hidden="true" />
@@ -31,8 +35,8 @@ export default function Hero() {
           <SocialLinks className="hero-social" />
         </div>
 
-        <div className="hero-visual">
-          <div className={`hero-photo ${profileImageCutout ? 'hero-photo--cutout' : ''}`}>
+        <div className="hero-visual hero-visual--enter">
+          <div className={`hero-photo hero-photo--intro ${profileImageCutout ? 'hero-photo--cutout' : ''}`}>
             <img src={profileImage} alt={profileImageAlt} width="700" height="900" fetchPriority="high" decoding="async" />
           </div>
         </div>

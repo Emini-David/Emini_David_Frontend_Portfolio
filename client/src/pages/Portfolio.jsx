@@ -13,6 +13,7 @@ function CaseStudy({ project, index }) {
   return (
     <Reveal
       as="article"
+      direction={reversed ? 'right' : 'left'}
       id={project.id}
       className={`case-study ${reversed ? 'case-study--reverse' : ''}`}
       aria-labelledby={`${project.id}-case`}
@@ -89,7 +90,7 @@ export default function Portfolio() {
   usePageMeta({
     title: 'Portfolio',
     description:
-      'Featured and selected projects by David Ayodele: full-stack platforms, a banking application and e-commerce storefronts.',
+      'Featured and selected projects by Ogunfadewo David Ayodele: full-stack platforms, a banking application and e-commerce storefronts.',
   })
 
   return (
@@ -102,10 +103,10 @@ export default function Portfolio() {
             label="Portfolio"
             title={
               <>
-                Featured <span className="text-accent">Work</span>
+                Work <span className="text-accent">Highlights</span>
               </>
             }
-            intro="A closer look at the projects I have built: what they do, the technology behind them and the decisions that shaped them."
+            intro="Explore selected projects, the needs they address, the tools behind them, and the reasoning that guided their development."
           />
         </div>
       </section>

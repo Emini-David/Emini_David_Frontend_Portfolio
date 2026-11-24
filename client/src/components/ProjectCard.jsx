@@ -7,7 +7,7 @@ import { STATUS_LABELS } from '../data/projects'
 /** Large card used for Featured Projects. */
 export default function ProjectCard({ project, index = 0 }) {
   return (
-    <Reveal as="article" className="project-card" delay={index * 80} aria-labelledby={`${project.id}-title`}>
+    <Reveal as="article" direction={index % 2 ? 'right' : 'left'} className="project-card" delay={index * 80} aria-labelledby={`${project.id}-title`}>
       <div className="project-card__media">
         <SmartImage src={project.image} alt={project.imageAlt} fallbackLabel={project.name} width="960" height="600" />
         {project.status && <span className={`status-badge status-${project.status}`}>{STATUS_LABELS[project.status]}</span>}

@@ -111,7 +111,7 @@ export default function Contact() {
             title={portfolio.contact.heading}
             intro={portfolio.contact.text}
           />
-          <Reveal as="ul" className="contact-methods">
+          <Reveal direction="left" as="ul" className="contact-methods">
             {contactItems.map(({ key, label, href, icon: Icon, external }) => (
               <li key={key}>
                 <a href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
@@ -130,7 +130,7 @@ export default function Contact() {
           </Reveal>
         </div>
 
-        <Reveal className="contact-form-card">
+        <Reveal direction="right" className="contact-form-card">
           <form className="contact-form" onSubmit={onSubmit} noValidate aria-describedby="form-status">
             <div className={`field ${errors.name ? 'has-error' : ''}`}>
               <label htmlFor="contact-name">Full Name</label>

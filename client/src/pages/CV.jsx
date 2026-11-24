@@ -27,7 +27,7 @@ export default function CV() {
   return (
     <section className="page-hero cv-page" aria-labelledby="cv-title">
       <div className="container">
-        <Reveal className="cv-header">
+        <Reveal direction="left" className="cv-header">
           <p className="section-label">Curriculum Vitae</p>
           <h1 id="cv-title" className="section-title">
             {name}
@@ -57,7 +57,7 @@ export default function CV() {
             </a>
           </div>
         ) : (
-          <Reveal className="cv-viewer">
+          <Reveal direction="right" className="cv-viewer">
             <object data={`${cv.file}#view=FitH`} type="application/pdf" aria-label={`${name} CV (PDF)`}>
               <div className="cv-fallback">
                 <FiFileText aria-hidden="true" />

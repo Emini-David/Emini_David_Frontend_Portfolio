@@ -487,6 +487,24 @@ textarea {
   gap: clamp(2rem, 6vw, 5rem);
 }
 
+.hero-copy--enter {
+  animation: enter-from-left 0.65s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hero-visual--enter {
+  animation: enter-from-right 0.75s 0.08s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@keyframes enter-from-left {
+  from { opacity: 0; transform: translateX(-36px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes enter-from-right {
+  from { opacity: 0; transform: translateX(36px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 .hero-greeting {
   color: var(--color-muted);
   font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
@@ -501,8 +519,41 @@ textarea {
   letter-spacing: -0.035em;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .hero-name span {
   display: block;
+}
+
+.hero-name .hero-name-typing {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.07em solid var(--color-accent);
+  animation: hero-type-first 8s steps(10, end) infinite;
+}
+
+.hero-name .hero-name-lastline {
+  animation-name: hero-type-last;
+  animation-delay: 0s;
+}
+
+.hero-name .hero-name-lastline {
+  white-space: nowrap;
+}
+
+.hero-name .hero-name-lastline .text-accent {
+  display: inline;
 }
 
 .hero-role {
@@ -577,6 +628,27 @@ textarea {
   position: relative;
   width: 100%;
   max-width: 340px;
+}
+
+.hero-photo--intro {
+  animation: hero-photo-enter 1s 0.25s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@keyframes hero-type-first {
+  0%, 80%, 100% { width: 0; }
+  20%, 60% { width: 10ch; }
+  0%, 18%, 80%, 100% { border-right-color: var(--color-accent); }
+  20%, 79% { border-right-color: transparent; }
+}
+
+@keyframes hero-type-last {
+  0%, 25%, 80%, 100% { width: 0; }
+  45%, 60% { width: 13ch; }
+}
+
+@keyframes hero-photo-enter {
+  from { opacity: 0; transform: translateY(22px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* Solid accent block offset behind the photo: simple, bold, no glow. */
@@ -1400,6 +1472,11 @@ textarea {
   font-weight: 600;
 }
 
+.education-location {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
 .education-period {
   margin-top: 0.15rem;
   color: var(--color-muted);
@@ -1705,12 +1782,29 @@ textarea {
 /* ==========================================================================
    MOTION
    ========================================================================== */
+.page-transition {
+  animation: page-enter 0.45s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
   transition:
     opacity 0.5s var(--ease),
     transform 0.5s var(--ease);
+}
+
+.reveal--left {
+  transform: translateX(-32px);
+}
+
+.reveal--right {
+  transform: translateX(32px);
 }
 
 .reveal.is-visible {
@@ -1730,6 +1824,22 @@ textarea {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+  .page-transition {
+    animation: none;
+  }
+  .hero-copy--enter,
+  .hero-visual--enter {
+    animation: none;
+  }
+  .hero-name .hero-name-typing {
+    width: auto;
+    overflow: visible;
+    border-right: 0;
+    animation: none;
+  }
+  .hero-photo--intro {
+    animation: none;
   }
 }
 

@@ -32,19 +32,23 @@ function ScrollManager() {
 }
 
 export default function App() {
+  const location = useLocation()
+
   return (
     <>
       <ScrollManager />
       <Navbar />
       <main id="main" tabIndex={-1}>
         <Suspense fallback={<div className="page-loading" aria-label="Loading page" />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <div key={location.pathname} className="page-transition">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/cv" element={<CV />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
         </Suspense>
       </main>
       <Footer />

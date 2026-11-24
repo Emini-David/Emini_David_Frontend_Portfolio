@@ -7,22 +7,24 @@
  *
  * Leave any link as null (or '') to hide it everywhere on the site.
  */
-// Profile photo (square crop of the original portrait).
+// Passport-style profile photo.
 // For a transparent-background cut-out instead, import that file and set profileImageCutout to true.
 import profileImage from '../assets/david-ayodele-passport.jpg'
 
 const portfolio = {
-  name: 'David Ayodele',
-  firstName: 'David',
+  name: 'Ogunfadewo David Ayodele',
+  brandName: 'Emini_David',
+  firstName: 'Ogunfadewo',
+  middleName: 'David',
   lastName: 'Ayodele',
   initials: 'DA',
   title: 'Full Stack MERN Developer',
   description:
-    'I build modern web applications, APIs and digital solutions with React, Node.js, Express and MongoDB, with a focus on clean code, performance and real user impact.',
+    'I create end-to-end web products and APIs using React, Node.js, Express, and MongoDB, prioritizing readable code, fast performance, and practical value for users.',
 
   profileImage,
   profileImageCutout: false,
-  profileImageAlt: 'Portrait of David Ayodele',
+  profileImageAlt: 'Portrait of Ogunfadewo David Ayodele',
 
   email: 'davidayodele377@gmail.com',
   // International format without "+" or spaces, used for the WhatsApp link. Set to null to hide.
@@ -44,10 +46,10 @@ const portfolio = {
   },
 
   about: {
-    statement: 'Building reliable and scalable web applications.',
+    statement: 'Creating dependable web solutions designed to grow with their users.',
     summary: [
-      'I am a Full Stack MERN Developer who works across the whole application: responsive interfaces in React, REST APIs in Node.js and Express, and data models in MongoDB.',
-      'I care about clean, readable code, interfaces that work on every screen size, and solving the actual problem a project exists for.',
+      'As a Full Stack MERN Developer, I build across the stack—from responsive React interfaces to Node.js and Express APIs, backed by MongoDB data models.',
+      'I value maintainable code, accessible experiences on any screen, and solutions shaped around each project’s real needs.',
     ],
     focus: [
       'Frontend development',
@@ -61,19 +63,31 @@ const portfolio = {
     ],
     approach: [
       {
-        title: 'Understand the problem first',
-        text: 'I start from who will use the application and what they need to get done, then plan the data and screens around that.',
+        title: 'Begin with the people who will use it',
+        text: 'I learn what users need to accomplish, then shape the features, screens, and data to support those goals.',
       },
       {
-        title: 'Build end to end',
-        text: 'From database schema to API to interface, I keep each layer clearly separated so it is easy to test, change and extend.',
+        title: 'Bring the full stack together',
+        text: 'I connect the database, API, and interface while keeping each part modular for easier testing and future updates.',
       },
       {
-        title: 'Ship for real devices',
-        text: 'I test layouts from small phones to large screens and keep pages light so they load well on slower connections.',
+        title: 'Make it work on everyday devices',
+        text: 'I check the experience on screens of different sizes and optimize pages to stay responsive, including on slower networks.',
       },
     ],
     education: [
+      {
+        school: 'Olabisi Onabanjo University',
+        location: 'Ago-Iwoye, Ogun State, Nigeria',
+        qualification: 'B.A. French',
+        period: '2021–2024',
+      },
+      {
+        school: 'Exquitec Education Technology',
+        location: 'Igbeba, Ijebu-Ode, Ogun State, Nigeria',
+        qualification: 'Frontend Development',
+        period: '2025',
+      },
       {
         school: 'SQI College of ICT',
         qualification: 'Professional Diploma in Software Engineering',
@@ -83,16 +97,16 @@ const portfolio = {
   },
 
   contact: {
-    heading: "Let's Work Together",
+    heading: "Let's Build Something Valuable",
     subheading: 'Have a project in mind?',
-    text: 'Whether you need a web application, an API or help improving an existing product, send me a message and I will get back to you.',
+    text: 'Need a website, an API, or support refining an existing product? Tell me what you are working on, and I would be happy to discuss how I can help.',
   },
 
   seo: {
-    siteName: 'David Ayodele',
-    defaultTitle: 'David Ayodele | Full Stack MERN Developer',
+    siteName: 'Emini_David',
+    defaultTitle: 'Ogunfadewo David Ayodele | Full Stack MERN Developer',
     defaultDescription:
-      'David Ayodele is a Full Stack MERN Developer building web applications, APIs and digital solutions with React, Node.js, Express and MongoDB.',
+      'Ogunfadewo David Ayodele creates web products and APIs with React, Node.js, Express, and MongoDB, with an emphasis on maintainable code, speed, and useful outcomes.',
   },
 }
 

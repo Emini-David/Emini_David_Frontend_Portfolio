@@ -9,7 +9,7 @@ const canAnimate = () =>
  * Small fade/slide-in on scroll. Content is fully visible if animation
  * is unsupported or the visitor prefers reduced motion.
  */
-export default function Reveal({ as: Tag = 'div', className = '', delay = 0, children, ...rest }) {
+export default function Reveal({ as: Tag = 'div', className = '', delay = 0, direction = 'up', children, ...rest }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(() => !canAnimate())
 
@@ -32,7 +32,7 @@ export default function Reveal({ as: Tag = 'div', className = '', delay = 0, chi
   return (
     <Tag
       ref={ref}
-      className={`reveal ${visible ? 'is-visible' : ''} ${className}`.trim()}
+      className={`reveal reveal--${direction} ${visible ? 'is-visible' : ''} ${className}`.trim()}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
       {...rest}
     >

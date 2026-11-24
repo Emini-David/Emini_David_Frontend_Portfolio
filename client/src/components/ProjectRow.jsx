@@ -6,7 +6,7 @@ import Reveal from './Reveal'
 /** Compact horizontal card used for Selected Projects. */
 export default function ProjectRow({ project, index = 0 }) {
   return (
-    <Reveal as="article" className="project-row" delay={index * 80} aria-labelledby={`${project.id}-row-title`}>
+    <Reveal as="article" direction={index % 2 ? 'right' : 'left'} className="project-row" delay={index * 80} aria-labelledby={`${project.id}-row-title`}>
       <div className="project-row__media">
         <SmartImage src={project.image} alt={project.imageAlt} fallbackLabel={project.name} width="960" height="450" />
       </div>

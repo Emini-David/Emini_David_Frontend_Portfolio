@@ -19,7 +19,7 @@ export default function Technologies({ label = 'Skills' }) {
             </>
           }
         />
-        <Reveal className="tech-card">
+        <Reveal direction="right" className="tech-card">
           {groups.map((g) => (
             <div key={g.id} className={`tech-group ${g.id === 'expanding' ? 'tech-group--expanding' : ''}`}>
               <h3 className="tech-group__title">{g.label}</h3>
